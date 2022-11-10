@@ -1,0 +1,21 @@
+:root {
+	--gray-100: #1d252d; /* 29,37,45 */
+	--gray-80: #4a5157; /* 74,81,87 */
+	--gray-60: #777c81; /* 119,124,129 */
+	--gray-40: #a5a8ab; /* 165,168,171 */
+	--gray-20: #d2d3d5; /* 210,211,213 */
+	--gray-10: #e8e9ea; /* 232,233,234 */
+	--gray-5: #f4f4f5; /* 244,244,255 */
+	--white: #ffffff; /* 255,255,255 */
+	--success-100-percent: #28a745; /* 40,167,69 */
+	--error-100-percent: #dc3545; /* 220,53,69 */
+	--warning-100-percent: #ffc107; /* 255,193,7 */
+	--visited-100-percent: #59315f; /* 89,49,95 */
+	--primary-brand-100-percent: #7b5f; /* 0,123,95 */
+	--primary-brand-80-percent: #33957f; /* 51,149,127 */
+	--primary-brand-60-percent: #66b09f; /* 102,176,159 */
+	--primary-brand-40-percent: #99cabf; /* 153,202,191 */
+	--light-accent-100-percent: #97d700; /* 151,215,0 */
+	--light-accent-softened: #adc86d; /* 173,200,109 */
+	--dark-accent-100-percent: #5151; /* 0,81,81 */
+}

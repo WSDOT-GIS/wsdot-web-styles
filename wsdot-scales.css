@@ -1,0 +1,28 @@
+:root {
+	--Base17: 6.866rem; /* 68.66px B (18px) */
+	--Base16: 6.104rem; /* 61.04px A (16px) */
+	--Base15: 5.493rem; /* 54.93px B (18px) */
+	--Base14: 4.883rem; /*  48.83px A (16px) */
+	--Base13: 4.395rem; /* 43.95px B (18px) */
+	--Base12: 3.906rem; /* 39.06px A (16px) */
+	--Base11: 3.516rem; /* 35.16px B (18px) */
+	--Base10: 3.125rem; /* 31.25px A (16px) */
+	--Base9: 2.813rem; /* 28.13px B (18px) */
+	--Base8: 2.5rem; /* 25.00px A (16px) */
+	--Base7: 2.25rem; /* 22.50px B (18px) */
+	--Base6: 2rem; /* 20.00px A (16px) */
+	--Base5: 1.8rem; /* 18.00px B (18px) */
+	--Base4: 1.6rem; /* 16.00px A (16px) */
+	--Base3: 1.44rem; /* 14.40px B (18px) */
+	--Base2: 1.28rem; /* 12.80px A (16px) */
+	--Base1: 1.152rem; /* 11.52px B (18px) */
+	--Base0: 1rem; /* 10.00px A (16px) */
+	--Base-1: 0.922rem; /* 9.22px B (18px) */
+	--Base-2: 0.819rem; /* 8.19px A (16px) */
+	--Base-3: 0.737rem; /* 7.37px B (18px) */
+	--Base-4: 0.655rem; /* 6.55px A (16px) */
+	--Base-5: 0.59rem; /* 5.90px B (18px) */
+	--Base-6: 0.524rem; /* 5.24px A (16px) */
+	--Base-7: 0.472rem; /* 4.72px B (18px) */
+	--Base-8: 0.419rem; /* 4.19px A (16px) */
+}

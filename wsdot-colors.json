@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Gray 100",
+    "pms": "433 100%",
+    "rgb": "29, 37, 45",
+    "hex": "1d252d",
+    "sameAs": null
+  },
+  {
+    "name": "Gray 80",
+    "pms": "433 80%",
+    "rgb": "74, 81, 87",
+    "hex": "4a5157",
+    "sameAs": null
+  },
+  {
+    "name": "Gray 60",
+    "pms": "433 60%",
+    "rgb": "119, 124, 129",
+    "hex": "777c81",
+    "sameAs": null
+  },
+  {
+    "name": "Gray 40",
+    "pms": "433 40%",
+    "rgb": "165, 168, 171",
+    "hex": "a5a8ab",
+    "sameAs": null
+  },
+  {
+    "name": "Gray 20",
+    "pms": "433 20%",
+    "rgb": "210, 211, 213",
+    "hex": "d2d3d5",
+    "sameAs": null
+  },
+  {
+    "name": "Gray 10",
+    "pms": "433 10%",
+    "rgb": "232, 233, 234",
+    "hex": "e8e9ea",
+    "sameAs": null
+  },
+  {
+    "name": "Gray 5",
+    "pms": "433 5%",
+    "rgb": "244, 244, 255",
+    "hex": "f4f4f5",
+    "sameAs": null
+  },
+  {
+    "name": "White",
+    "pms": null,
+    "rgb": "255, 255, 255",
+    "hex": "ffffff",
+    "sameAs": null
+  },
+  {
+    "name": "Success 100%",
+    "pms": null,
+    "rgb": "40, 167, 69",
+    "hex": "28a745",
+    "sameAs": "Same as Bootstrap’s Success color"
+  },
+  {
+    "name": "Error 100%",
+    "pms": null,
+    "rgb": "220, 53, 69",
+    "hex": "dc3545",
+    "sameAs": "Same as Bootstrap’s Danger color"
+  },
+  {
+    "name": "Warning 100%",
+    "pms": null,
+    "rgb": "255, 193, 7",
+    "hex": "ffc107",
+    "sameAs": "Same as Bootstrap’s Warning color"
+  },
+  {
+    "name": "Visited 100%",
+    "pms": null,
+    "rgb": "89, 49, 95",
+    "hex": "59315F",
+    "sameAs": "Same as WSDOT tolling purple color"
+  },
+  {
+    "name": "Primary brand 100%",
+    "pms": null,
+    "rgb": "0, 123, 95",
+    "hex": "007b5f",
+    "sameAs": null
+  },
+  {
+    "name": "Primary brand 80%",
+    "pms": null,
+    "rgb": "51, 149, 127",
+    "hex": "33957f",
+    "sameAs": null
+  },
+  {
+    "name": "Primary brand 60%",
+    "pms": null,
+    "rgb": "102, 176, 159",
+    "hex": "66b09f",
+    "sameAs": null
+  },
+  {
+    "name": "Primary brand 40%",
+    "pms": null,
+    "rgb": "153, 202, 191",
+    "hex": "99cabf",
+    "sameAs": null
+  },
+  {
+    "name": "Light accent 100%",
+    "pms": null,
+    "rgb": "151, 215, 0",
+    "hex": "97d700",
+    "sameAs": null
+  },
+  {
+    "name": "Light accent softened",
+    "pms": null,
+    "rgb": "173, 200, 109",
+    "hex": "ADC86D",
+    "sameAs": null
+  },
+  {
+    "name": "Dark accent 100%",
+    "pms": null,
+    "rgb": "0, 81, 81",
+    "hex": "005151",
+    "sameAs": null
+  }
+]
