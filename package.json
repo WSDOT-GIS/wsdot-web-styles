@@ -9,10 +9,6 @@
     "prepare": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gist.github.com/c05e9d3a79b4d61bbd9ef7f3e870eb1a.git"
-  },
   "keywords": [
     "wsdot",
     "color",
@@ -20,10 +16,6 @@
   ],
   "author": "Jeff Jacobson",
   "license": "Unlicense",
-  "bugs": {
-    "url": "https://gist.github.com/c05e9d3a79b4d61bbd9ef7f3e870eb1a"
-  },
-  "homepage": "https://gist.github.com/c05e9d3a79b4d61bbd9ef7f3e870eb1a",
   "devDependencies": {
     "@types/jsdom": "^20.0.1",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
@@ -33,5 +25,13 @@
   },
   "dependencies": {
     "jsdom": "^20.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WSDOT-GIS/wsdot-web-styles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WSDOT-GIS/wsdot-web-styles/issues"
+  },
+  "homepage": "https://github.com/WSDOT-GIS/wsdot-web-styles#readme"
 }
