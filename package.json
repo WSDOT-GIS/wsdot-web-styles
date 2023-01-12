@@ -1,5 +1,5 @@
 {
-  "name": "wsdot-colors",
+  "name": "@wsdot/web-styles",
   "version": "1.0.0",
   "description": "Scrapes colors from WSDOT style guide colors page",
   "private": true,
