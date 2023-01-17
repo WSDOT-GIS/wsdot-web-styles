@@ -70,22 +70,15 @@ export class ColorInfo {
    * Converts the object into a CSS variable definition.
    */
   public toString(format: ColorInfoToStringFormat = "hex") {
-    if (format = "hex") {
+    if (format === "hex") {
       return `${this.cssName}: #${this.hex.toString(16)};`;
-    } else if (format = "rgb") {
+    } else if (format === "rgb") {
       return `${this.cssName}: rgb(${this.rgb.join(",")});`;
     }
     throw new TypeError(`format must be either "hex" or "rgb". Instead got ${format}`);
   }
 
 }
-
-const propToIndexMap = new Map([
-  [0, "name"],
-  [2, "pms"],
-  [3, "rgb"],
-  [4, "hex"]
-])
 
 /**
  * Gets color info from the table of table definitions.
@@ -96,14 +89,13 @@ const propToIndexMap = new Map([
  */
 function getColorInfoColumn(table: HTMLTableElement, i: number) {
   const selector = `td:nth-child(${i})`;
-  let cells = [...table.querySelectorAll(selector)];
+  const cells = [...table.querySelectorAll(selector)];
   if (!cells.length) {
     return null;
   }
-  const output: Record<string, string> = {};
   const textContents = [...cells.entries()]
     .filter(([i, cell]) => i !== 1 && cell.textContent != null)
-    .map(([i, cell]) => cell.textContent?.trimEnd()) as string[];
+    .map(([, cell]) => cell.textContent?.trimEnd()) as string[];
   return new ColorInfo(textContents[0], ...textContents.slice(1));
 }
 
@@ -188,13 +180,10 @@ export async function* getScales(url = scaleIncrementsUrl) {
   function* enumerateScaleIncrements(table: HTMLTableElement) {
     const rows = table?.querySelectorAll("tr");
 
-    let names;
-
     for (const [i, row] of rows.entries()) {
       const cells = [...row.querySelectorAll("td")].map(cell => cell.textContent as string);
       // The first row contains table headings
       if (i === 0) {
-        names = cells;
         continue;
       }
 
