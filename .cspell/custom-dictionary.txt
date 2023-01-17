@@ -1,0 +1,5 @@
+# Custom Dictionary Words
+fontsource
+inconsolata
+lato
+MUTCD

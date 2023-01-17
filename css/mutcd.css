@@ -1,0 +1,35 @@
+/* 
+Manual on Uniform Traffic Control Devices (MUTCD) colors
+See: https://commons.wikimedia.org/wiki/Category:PD_MUTCD
+*/
+
+:root {
+    /* rgb(96,51,17) */
+    --brown-469: #603311;
+    /* rgb(175,30,45) */
+    --red-187: #af1e2d;
+    /* rgb(252,209,22) */
+    --yellow-116: #fcd116;
+    /* rgb(0,107,84) */
+    --green-342: #006b54;
+    ;
+    /* rgb(0,63,135) */
+    --blue-294: #003f87;
+    ;
+    /* rgb(224,170,15) */
+    --gold-124: #e0aa0f;
+    /* rgb(226,214,181) */
+    --cream-468: #e2d6b5;
+
+    /* 
+    Create aliases w/o numbers in names so they'll be easier to remember.
+    */
+    --mutcd-brown: var(--brown-469);
+    --mutcd-red: var(--red-187);
+    --mutcd-yellow: var(--yellow-116);
+    --mutcd-green: var(--green-342);
+    --mutcd-blue: var(--blue-294);
+    --mutcd-orange: var(--orange-152);
+    --mutcd-gold: var(--gold-124);
+    --mutcd-cream: var(--cream-468);
+}
