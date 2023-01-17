@@ -1,7 +1,7 @@
 {
   "name": "@wsdot/web-styles",
   "version": "1.0.0",
-  "description": "Scrapes colors from WSDOT style guide colors page",
+  "description": "Provides WSDOT style definitions for websites",
   "private": true,
   "type": "module",
   "main": "index.js",
@@ -16,15 +16,18 @@
   ],
   "author": "Jeff Jacobson",
   "license": "Unlicense",
+  "dependencies": {},
+  "optionalDependencies": {
+    "@fontsource/lato": "^4.5.10",
+    "@fontsource/inconsolata": "^4.5.9"
+  },
   "devDependencies": {
+    "jsdom": "^20.0.2",
     "@types/jsdom": "^20.0.1",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.27.0",
     "typescript": "^4.8.4"
-  },
-  "dependencies": {
-    "jsdom": "^20.0.2"
   },
   "repository": {
     "type": "git",

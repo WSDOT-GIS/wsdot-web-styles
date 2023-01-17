@@ -1,3 +1,7 @@
+/**
+ * Gets style info from WSDOT style guide website.
+ */
+
 let jsdom: typeof import("jsdom") | undefined = undefined;
 
 if (typeof window === "undefined") {
@@ -5,10 +9,10 @@ if (typeof window === "undefined") {
 }
 
 const urlRoot = new URL("https://wsdotwebhelp.gitbook.io");
-const colorPageUrl = new URL("web-style-guide/design-foundations/color", urlRoot); // "https://wsdotwebhelp.gitbook.io/web-style-guide/design-foundations/color";
-const scaleIncrementsUrl = new URL("web-style-guide/design-foundations/typography/typographic-scale/scale-increments", urlRoot); //"https://wsdotwebhelp.gitbook.io/web-style-guide/design-foundations/typography/typographic-scale/scale-increments";
-
-// const tables = document.body.querySelectorAll("table");
+// "https://wsdotwebhelp.gitbook.io/web-style-guide/design-foundations/color";
+const colorPageUrl = new URL("web-style-guide/design-foundations/color", urlRoot); 
+//"https://wsdotwebhelp.gitbook.io/web-style-guide/design-foundations/typography/typographic-scale/scale-increments";
+const scaleIncrementsUrl = new URL("web-style-guide/design-foundations/typography/typographic-scale/scale-increments", urlRoot);
 
 const pmsRe = /(\d+)\s+(\d+)%/ig;
 const rgbRe = /(\d+),\s(\d+),\s(\d+)/g;
@@ -161,6 +165,10 @@ export interface Scale {
   remSize: string;
 }
 
+/**
+ * Gets scale increments from style guide.
+ * @param url 
+ */
 export async function* getScales(url = scaleIncrementsUrl) {
 
   let document = (await jsdom?.JSDOM.fromURL(url.toString()))?.window.document;
