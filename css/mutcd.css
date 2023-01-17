@@ -1,12 +1,6 @@
-/*
-Brown - 469       (RGB 96,51,17 / Hex #603311);
-Red - 187       (175,30,45 / #af1e2d);
-Yellow - 116       (252,209,22 / #fcd116);
-Green - 342       (0,107,84 / #006b54);
-Blue - 294       (0,63,135 / #003f87);
-Orange - 152       (221,117,0 / #dd7500);
-Gold - 124       (224,170,15 / #e0aa0f);
-Cream - 468       (226,214,181 / #e2d6b5)
+/* 
+Manual on Uniform Traffic Control Devices (MUTCD) colors
+See: https://commons.wikimedia.org/wiki/Category:PD_MUTCD
 */
 
 :root {
