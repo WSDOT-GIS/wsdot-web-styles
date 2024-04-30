@@ -1,7 +1,12 @@
-import { getScales } from "./index.js";
+import { scrapeScales } from "./index.js";
 
 console.log(":root {");
-for await (const {base, incrementName, remSize, pixelSize} of getScales()) {
-    console.log(`\t--${incrementName}: ${remSize}; /* ${pixelSize} ${base} */`);
+for await (const {
+  base,
+  incrementName,
+  remSize,
+  pixelSize,
+} of scrapeScales()) {
+  console.log(`\t--${incrementName}: ${remSize}; /* ${pixelSize} ${base} */`);
 }
-console.log("}")
+console.log("}");
