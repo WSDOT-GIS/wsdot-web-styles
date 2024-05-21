@@ -21,9 +21,12 @@
   ],
   "author": "Jeff Jacobson",
   "license": "Unlicense",
+  "overrides": {
+    "eslint": "$eslint"
+  },
   "optionalDependencies": {
-    "@fontsource/lato": "^4.5.10",
-    "@fontsource/inconsolata": "^4.5.9"
+    "@fontsource/lato": "^5.0.18",
+    "@fontsource/inconsolata": "^5.0.21"
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",
