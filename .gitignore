@@ -616,3 +616,5 @@ icons-svg-png.zip
 
 *.js
 *.mjs
+.gitattributes.new
+!.prettierrc.js

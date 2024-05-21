@@ -1,5 +1,6 @@
 # Custom Dictionary Words
 fontsource
+Haettenschweiler
 inconsolata
 lato
 MUTCD
