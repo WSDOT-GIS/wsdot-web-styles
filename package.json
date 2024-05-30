@@ -5,6 +5,10 @@
   "private": true,
   "type": "module",
   "main": "tools/index.js",
+  "bin": {
+    "get-colors": "tools/get-colors.js",
+    "get-scales": "tools/get-scales.js"
+  },
   "files": [
     "tools/*.js",
     "css/**/*.css",
@@ -12,7 +16,8 @@
   ],
   "scripts": {
     "lint": "eslint . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "tsc && bun run tools/build.ts"
   },
   "keywords": [
     "wsdot",
