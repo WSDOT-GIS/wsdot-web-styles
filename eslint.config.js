@@ -8,13 +8,11 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   jsdoc.configs["flat/recommended-typescript"],
   {
     ignores: [".prettierrc.js"],
   },
   {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     plugins: { jsdoc },
     languageOptions: {
       parserOptions: {
