@@ -34,13 +34,15 @@ const sameAsRe = /Same as.+/gi;
 
 export type ColorInfoToStringFormat = "rgb" | "hex";
 
+type RgbTuple = [red: number, green: number, blue: number];
+
 /**
  * Represents a color definition.
  */
 export class ColorInfo {
   name: string;
   pms?: string;
-  rgb!: [red: number, green: number, blue: number];
+  rgb!: RgbTuple;
   hex!: number;
   sameAs?: string;
 
@@ -54,6 +56,9 @@ export class ColorInfo {
   constructor(name: string, ...values: string[]) {
     this.name = name;
 
+    let rgb: typeof this.rgb | undefined = undefined;
+    let hex: typeof this.hex | undefined = undefined;
+
     for (const v of values) {
       if (v === undefined) {
         continue;
@@ -66,15 +71,17 @@ export class ColorInfo {
 
       match = v.match(rgbRe);
       if (match) {
-        this.rgb = match[0]
+        rgb = match[0]
           .split(/,\s/g)
           .map((v) => parseInt(v)) as (typeof this)["rgb"];
+        this.rgb = rgb;
         continue;
       }
 
       match = v.match(hexRe);
       if (match) {
-        this.hex = parseInt(match[0], 16);
+        hex = parseInt(match[0], 16);
+        this.hex = hex;
         continue;
       }
 
@@ -83,6 +90,20 @@ export class ColorInfo {
         this.sameAs = match[0];
         continue;
       }
+    }
+
+    if (rgb == null && hex == null) {
+      throw new TypeError(`Color ${name} has no hex or RGB values.`, {
+        cause: values,
+      });
+    } else if (rgb == null) {
+      throw new TypeError(`Color ${name} has no rgb value`, {
+        cause: values,
+      });
+    } else if (hex == null) {
+      throw new TypeError(`Color ${name} has no hex value`, {
+        cause: values,
+      });
     }
   }
 
@@ -103,14 +124,20 @@ export class ColorInfo {
    * @returns - The CSS variable definition.
    */
   public toString(format: ColorInfoToStringFormat = "hex") {
-    if (format === "hex") {
+    if (format !== "hex" && format !== "rgb") {
+      throw new TypeError(
+        `format must be either "hex" or "rgb". Instead got ${format as string}`,
+      );
+    }
+    if (format === "hex" && this.hex != null) {
       return `${this.cssName}: #${this.hex.toString(16)};`;
-    } else if (format === "rgb") {
+    } else if (format === "rgb" && this.rgb != null && this.rgb.length > 0) {
       return `${this.cssName}: rgb(${this.rgb.join(",")});`;
     }
-    throw new TypeError(
-      `format must be either "hex" or "rgb". Instead got ${format as string}`,
-    );
+
+    throw new TypeError(`Unexpected color info`, {
+      cause: this,
+    });
   }
 }
 
@@ -123,14 +150,31 @@ export class ColorInfo {
  */
 function getColorInfoColumn(table: HTMLTableElement, i: number) {
   const selector = `td:nth-child(${i})`;
-  const cells = [...table.querySelectorAll(selector)];
+  const cells = table.querySelectorAll<HTMLTableCellElement>(selector);
+  let output: ColorInfo | null;
   if (!cells.length) {
-    return null;
+    output = null;
+  } else {
+    type IndexCellTuple = [index: number, cell: HTMLTableCellElement];
+
+    /**
+     * Filters out cells that are not in the second column and have non-null text content.
+     * @param value - The index and cell to filter.
+     * @returns True if the index is not 1 and the cell is not null.
+     */
+    function filterFunction(value: IndexCellTuple): boolean {
+      const [i, cell] = value;
+      return i !== 1 && cell != null;
+    }
+    function mapFunction([, cell]: IndexCellTuple): string | undefined {
+      return cell.textContent?.trimEnd();
+    }
+    const textContents = [...cells.entries()]
+      .filter(filterFunction)
+      .map(mapFunction) as string[];
+    output = new ColorInfo(textContents[0], ...textContents.slice(1));
   }
-  const textContents = [...cells.entries()]
-    .filter(([i, cell]) => i !== 1 && cell.textContent != null)
-    .map(([, cell]) => cell.textContent?.trimEnd()) as string[];
-  return new ColorInfo(textContents[0], ...textContents.slice(1));
+  return output;
 }
 
 /**
@@ -159,7 +203,10 @@ function* getColorInfo(
 export function getColorInfosFromTable(
   tables: Iterable<HTMLTableElement>,
 ): ColorInfo[] {
-  return [...tables].map((t) => [...getColorInfo(t)]).flat();
+  function getColorInfosFromHtmlTable(t: HTMLTableElement): ColorInfo[] {
+    return [...getColorInfo(t)];
+  }
+  return [...tables].map(getColorInfosFromHtmlTable).flat();
 }
 
 /**
