@@ -1,44 +1,36 @@
 {
-  "name": "@wsdot/web-styles",
-  "version": "1.0.1",
-  "description": "Provides WSDOT style definitions for websites",
-  "private": true,
-  "type": "module",
-  "main": "tools/index.js",
-  "files": [
-    "tools/*.js",
-    "css/**/*.css",
-    "images/**/*.{svg,png}"
-  ],
-  "scripts": {
-    "lint": "biome lint --write",
-    "format": "biome format --write",
-    "biome": "biome check --write"
-  },
-  "keywords": [
-    "wsdot",
-    "color",
-    "standards"
-  ],
-  "author": "Jeff Jacobson",
-  "license": "Unlicense",
-  "optionalDependencies": {
-    "@fontsource/lato": "^5.0.18",
-    "@fontsource/inconsolata": "^5.0.21"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@types/bun": "latest",
-    "@types/jsdom": "^21.1.6",
-    "jsdom": "^24.0.0",
-    "typescript": "^5.4.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WSDOT-GIS/wsdot-web-styles.git"
-  },
-  "bugs": {
-    "url": "https://github.com/WSDOT-GIS/wsdot-web-styles/issues"
-  },
-  "homepage": "https://github.com/WSDOT-GIS/wsdot-web-styles#readme"
+	"name": "@wsdot/web-styles",
+	"version": "1.0.1",
+	"description": "Provides WSDOT style definitions for websites",
+	"private": true,
+	"type": "module",
+	"main": "tools/index.js",
+	"files": ["tools/*.js", "css/**/*.css", "images/**/*.{svg,png}"],
+	"scripts": {
+		"lint": "biome lint --write",
+		"format": "biome format --write",
+		"biome": "biome check --write"
+	},
+	"keywords": ["wsdot", "color", "standards"],
+	"author": "Jeff Jacobson",
+	"license": "Unlicense",
+	"optionalDependencies": {
+		"@fontsource/lato": "^5.0.18",
+		"@fontsource/inconsolata": "^5.0.21"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/bun": "latest",
+		"@types/jsdom": "^21.1.6",
+		"jsdom": "^24.0.0",
+		"typescript": "^5.4.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/WSDOT-GIS/wsdot-web-styles.git"
+	},
+	"bugs": {
+		"url": "https://github.com/WSDOT-GIS/wsdot-web-styles/issues"
+	},
+	"homepage": "https://github.com/WSDOT-GIS/wsdot-web-styles#readme"
 }
