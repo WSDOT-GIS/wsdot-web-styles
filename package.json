@@ -11,6 +11,9 @@
     "images/**/*.{svg,png}"
   ],
   "scripts": {
+    "lint": "biome lint --write",
+    "format": "biome format --write",
+    "biome": "biome check --write"
   },
   "keywords": [
     "wsdot",
@@ -24,6 +27,7 @@
     "@fontsource/inconsolata": "^5.0.21"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/bun": "latest",
     "@types/jsdom": "^21.1.6",
     "jsdom": "^24.0.0",
