@@ -68,13 +68,13 @@ export class ColorInfo {
       if (match) {
         this.rgb = match[0]
           .split(/,\s/g)
-          .map((v) => parseInt(v)) as (typeof this)["rgb"];
+          .map((v) => Number.parseInt(v)) as (typeof this)["rgb"];
         continue;
       }
 
       match = v.match(hexRe);
       if (match) {
-        this.hex = parseInt(match[0], 16);
+        this.hex = Number.parseInt(match[0], 16);
         continue;
       }
 
@@ -159,7 +159,7 @@ function* getColorInfo(
 export function getColorInfosFromTable(
   tables: Iterable<HTMLTableElement>,
 ): ColorInfo[] {
-  return [...tables].map((t) => [...getColorInfo(t)]).flat();
+  return [...tables].flatMap((t) => [...getColorInfo(t)]);
 }
 
 /**
