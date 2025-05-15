@@ -1,6 +1,6 @@
 {
-    "eslint.experimental.useFlatConfig": true,
-    "eslint.format.enable": true,
-    "eslint.useESLintClass": true,
-    "editor.formatOnSave": true
+	"eslint.experimental.useFlatConfig": true,
+	"eslint.format.enable": true,
+	"eslint.useESLintClass": true,
+	"editor.formatOnSave": true
 }

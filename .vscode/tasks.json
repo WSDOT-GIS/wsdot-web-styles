@@ -4,18 +4,14 @@
 		{
 			"type": "typescript",
 			"tsconfig": "tsconfig.json",
-			"problemMatcher": [
-				"$tsc"
-			],
+			"problemMatcher": ["$tsc"],
 			"group": "build",
 			"label": "tsc: build - tsconfig.json"
 		},
 		{
 			"type": "bun",
 			"script": "eslint . --fix",
-			"problemMatcher": [
-				"$eslint-stylish"
-			],
+			"problemMatcher": ["$eslint-stylish"],
 			"label": "bun: lint",
 			"detail": "bun run eslint . --fix - package.json"
 		}
