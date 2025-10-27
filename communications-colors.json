@@ -1,0 +1,55 @@
+{
+	"colors": [
+		{
+			"name": "Land",
+			"cmyk": "6,3,0,0"
+		},
+		{
+			"name": "Water",
+			"cmyk": "42,3,13,0"
+		},
+		{
+			"name": "Project",
+			"cmyk": "0,59,90,0"
+		},
+		{
+			"name": "Roads",
+			"cmyk": "0,0,0,40"
+		},
+		{
+			"name": "Non-State",
+			"cmyk": "56,46,45,11"
+		}
+	],
+	"alternateRoutes": [
+		"PMS Red 32",
+		"PMS 7529",
+		"PMS 335",
+		"PMS 375",
+		"PMS 2415",
+		{
+			"color": "PMS 368",
+			"dash": "1pt",
+			"gap": "4.5pt",
+			"cap": "round"
+		},
+		{
+			"color": "PMS Process Blue",
+			"dash": "2pt",
+			"gap": "2pt",
+			"cap": "butt"
+		},
+		{
+			"color": "PMS Process Blue",
+			"dash": "3pt",
+			"gap": "6pt",
+			"cap": "round"
+		},
+		{
+			"color": "PMS 7549",
+			"dash": "1pt",
+			"gap": "1pt",
+			"cap": "butt"
+		}
+	]
+}

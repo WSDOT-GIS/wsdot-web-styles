@@ -2,6 +2,7 @@
 
 - CSS variables based on the [WSDOT Web Style Guide] and the tools used to generate them.
 - [WSDOT Custom Icons]
+- [WSDOT Communications Manual M 3030]
 
 ## Use
 
@@ -75,3 +76,4 @@ addWsdotLogo().catch((reason: unknown) => {
 [WSDOT Web Style Guide]: https://wsdotwebhelp.gitbook.io/web-style-guide/
 [WSDOT Custom Icons]: https://wsdotwebhelp.gitbook.io/web-style-guide/design-foundations/iconography#custom-icons
 [vite]: https://vitejs.dev
+[WSDOT Communications Manual M 3030]:https://www.wsdot.wa.gov/publications/manuals/fulltext/M3030/Communications.pdf#p116
