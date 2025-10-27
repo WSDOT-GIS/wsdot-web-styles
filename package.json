@@ -2,11 +2,9 @@
   "name": "@wsdot/web-styles",
   "version": "1.0.1",
   "description": "Provides WSDOT style definitions for websites",
-  "private": true,
   "type": "module",
   "main": "tools/index.js",
   "files": [
-    "tools/*.js",
     "css/**/*.css",
     "images/**/*.{svg,png}"
   ],
@@ -23,15 +21,15 @@
   "author": "Jeff Jacobson",
   "license": "Unlicense",
   "optionalDependencies": {
-    "@fontsource/lato": "^5.0.18",
-    "@fontsource/inconsolata": "^5.0.21"
+    "@fontsource/lato": "^5.2.7",
+    "@fontsource/inconsolata": "^5.2.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.3.1",
     "@types/bun": "latest",
-    "@types/jsdom": "^21.1.6",
-    "jsdom": "^24.0.0",
-    "typescript": "^5.4.5"
+    "@types/jsdom": "^27.0.0",
+    "jsdom": "^27.0.1",
+    "typescript": "^5.9.3"
   },
   "repository": {
     "type": "git",

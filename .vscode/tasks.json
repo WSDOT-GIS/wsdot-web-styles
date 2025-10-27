@@ -9,15 +9,6 @@
 			],
 			"group": "build",
 			"label": "tsc: build - tsconfig.json"
-		},
-		{
-			"type": "bun",
-			"script": "eslint . --fix",
-			"problemMatcher": [
-				"$eslint-stylish"
-			],
-			"label": "bun: lint",
-			"detail": "bun run eslint . --fix - package.json"
 		}
 	]
 }
